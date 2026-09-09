@@ -4,12 +4,16 @@
 
 ## プロジェクト概要
 
-`task-board` — タスク管理／カンバンボードアプリケーション。
+`task-board` — タスク管理アプリケーション。
 
 - リポジトリ: https://github.com/D-westside63/task-board.git
-- 現状: 初期セットアップ段階（実装コードはこれから追加）
-
-技術スタックや構成が固まった時点で、このセクションを更新すること。
+- 技術スタック: React 18 + Vite 5（JavaScript / JSX）
+- 状態管理: React `useState` のみ。タスクは `localStorage` に永続化（キー: `task-board.tasks`）
+- 現状の機能:
+  - テキスト入力でタスクを追加
+  - チェックボックスで完了／未完了を切り替え
+  - タスクを削除
+  - 完了済みタスクはグレー＋取り消し線で表示
 
 ## Git 運用ルール
 
@@ -38,17 +42,24 @@ git push origin main
 
 ## 開発コマンド
 
-（技術スタック確定後に追記）
-
-- セットアップ: TBD
-- 開発サーバー起動: TBD
-- ビルド: TBD
-- テスト: TBD
-- Lint / フォーマット: TBD
+- セットアップ: `npm install`
+- 開発サーバー起動: `npm run dev`（http://localhost:5173）
+- 本番ビルド: `npm run build`（`dist/` に出力）
+- ビルド結果の確認: `npm run preview`
+- テスト: 未整備
+- Lint / フォーマット: 未整備
 
 ## ディレクトリ構成
 
-（コード追加後に追記）
+```
+index.html          エントリHTML
+vite.config.js       Vite 設定
+src/
+  main.jsx          React マウント
+  App.jsx           アプリ本体（タスクの状態・追加・切替・削除）
+  App.css           アプリのスタイル（完了タスクのグレー表示を含む）
+  index.css         グローバルスタイル
+```
 
 ## コーディング方針
 
