@@ -24,6 +24,9 @@ pnpm-debug.log*
 # OS / エディタ
 .DS_Store
 Thumbs.db
+# macOS などが作る重複ファイル（"CLAUDE 2.md" 等）
+* [0-9].*
+*\ [0-9]
 .idea/
 .vscode/*
 !.vscode/extensions.json
