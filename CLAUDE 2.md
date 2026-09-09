@@ -4,16 +4,12 @@
 
 ## プロジェクト概要
 
-`task-board` — タスク管理アプリケーション。
+`task-board` — タスク管理／カンバンボードアプリケーション。
 
 - リポジトリ: https://github.com/D-westside63/task-board.git
-- 技術スタック: React 18 + Vite 5（JavaScript / JSX）
-- 状態管理: React `useState` のみ。タスクは `localStorage` に永続化（キー: `task-board.tasks`）
-- 現状の機能:
-  - テキスト入力でタスクを追加
-  - チェックボックスで完了／未完了を切り替え
-  - タスクを削除
-  - 完了済みタスクはグレー＋取り消し線で表示
+- 現状: 初期セットアップ段階（実装コードはこれから追加）
+
+技術スタックや構成が固まった時点で、このセクションを更新すること。
 
 ## Git 運用ルール
 
@@ -42,33 +38,17 @@ git push origin main
 
 ## 開発コマンド
 
-- セットアップ: `npm install`
-- 開発サーバー起動: `npm run dev`（http://localhost:5173）
-- 本番ビルド: `npm run build`（`dist/` に出力）
-- ビルド結果の確認: `npm run preview`
-- テスト: 未整備
-- Lint / フォーマット: 未整備
+（技術スタック確定後に追記）
+
+- セットアップ: TBD
+- 開発サーバー起動: TBD
+- ビルド: TBD
+- テスト: TBD
+- Lint / フォーマット: TBD
 
 ## ディレクトリ構成
 
-```
-index.html          エントリHTML
-vite.config.js       Vite 設定
-src/
-  main.jsx          React マウント
-  App.jsx           アプリ本体（タスクの状態・追加・切替・削除）
-  App.css           アプリのスタイル（完了タスクのグレー表示を含む）
-  index.css         グローバルスタイル
-```
-
-## デプロイ（GitHub Pages）
-
-- `main` へ push すると `.github/workflows/deploy.yml` が自動でビルド＆デプロイする。
-- 公開URL: https://d-westside63.github.io/task-board/
-- Vite の `base` を `/task-board/` に設定済み（[vite.config.js](vite.config.js)）。
-  リポジトリ名を変えたらこの値も合わせること。
-- 初回のみ、GitHub リポジトリの Settings → Pages → Build and deployment の
-  Source を「GitHub Actions」に設定する必要がある。
+（コード追加後に追記）
 
 ## コーディング方針
 
